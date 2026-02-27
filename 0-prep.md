@@ -9,14 +9,16 @@ nav: true
 <div class="commonninja_component pid-10daf108-7c2f-4a3b-9c15-2cca547af02d"></div>
 
 
+
+
+# Local Jekyll Setup [optional]
+
 <img src="studio-podcasting2.JPG" usemap="#image-map">
 
 <map name="image-map">
     <area target="_parent" alt="LED Sign" title="LED Sign" href="" coords="2503,667,371" shape="circle">
     <area target="_parent" alt="RODECaster Pro" title="RODECaster Pro" href="" coords="2789,1956,155" shape="circle">
 </map>
-
-# Local Jekyll Setup [optional]
 
 ## Install Git
 
