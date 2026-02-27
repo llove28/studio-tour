@@ -5,17 +5,8 @@ nav: true
 
 # Workshop Prep
 
-To create your own materials using `workshop-template`, please create a free [GitHub account](https://github.com/join) if you do not have one already.
-Basic familiarity with the GitHub web interface will be helpful.
-
-For a quick introduction check out GitHub's [Hello World guide](https://guides.github.com/activities/hello-world/) and [Try Git](https://try.github.io/).
-
-It is possible to create a website with this template using only GitHub's web interface--it works great!
-However, for more advanced uses you will want Git, Ruby, and Jekyll installed on your computer to do local development.
-
-1. Have a [GitHub](https://github.com) account.
-2. Fork or import this [repository](https://github.com/evanwill/workshop-template).
-3. Optional: have [Git](https://git-scm.com/), [Jekyll](https://jekyllrb.com/), and a nice [text editor](https://code.visualstudio.com/) installed.
+<script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
+<div class="commonninja_component pid-10daf108-7c2f-4a3b-9c15-2cca547af02d"></div>
 
 # Local Jekyll Setup [optional]
 
