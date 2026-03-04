@@ -1,0 +1,497 @@
+{% assign jpgimages = site.static_files | where_exp: 'f', 'f.path contains "/objects/"' | where: 'extname', '.jpg' %}
+{% assign jpegimages = site.static_files | where_exp: 'f', 'f.path contains "/objects/"' | where: 'extname', '.jpeg' %}
+{% assign pngimages = site.static_files | where_exp: 'f', 'f.path contains "/objects/"' | where: 'extname', '.png' %}
+{% assign images = jpgimages | concat: jpegimages | concat: pngimages %}
+{%- assign annotations = site.static_files | where_exp: 'f', 'f.path contains "/objects/"' | where_exp: 'f', 'f.extname == ".json"' -%}
+<link rel="stylesheet" href="{{ '/assets/lib' | relative_url }}/annotorious.css">
+<script src="{{ '/assets/lib' | relative_url }}/annotorious.js"></script>
+<script>
+/*
+  Image annotation interface using Annotorious vanilla javascript approach.
+  https://annotorious.dev/guides/annotating-images/
+*/
+
+// Color options for annotation tagging (Bootstrap theme colors)
+const colors = {
+  primary:   "#0d6efd",
+  secondary: "#6c757d",
+  success:   "#198754",
+  danger:    "#dc3545",
+  warning:   "#ffc107",
+  info:      "#0dcaf0",
+  dark:      "#212529"
+};
+
+// Element in page to add the image and annotator
+const annotator_div = document.getElementById("annotator");
+
+// List of images available in the project from "objects" directory
+const project_images = [ {% for i in images %}"{{ i.path | relative_url }}",{% endfor %} ];
+
+// List of existing annotation json files in the project from "objects" directory
+const project_annotations = [ {% for i in annotations %}"{{ i.path | relative_url }}",{% endfor %} ];
+
+// ── State ─────────────────────────────────────────────────────────────────────
+let anno = null;               // Annotorious instance
+let currentImagePath = null;   // Path of the currently loaded image
+let currentAnnotationId = null;// ID of annotation currently shown in the form
+let isNewAnnotation = false;   // True while the form captures a brand-new shape
+
+// ── sessionStorage helpers ────────────────────────────────────────────────────
+function storageKey() {
+  return "annotator_" + currentImagePath;
+}
+
+function saveToStorage() {
+  if (!anno) return;
+  sessionStorage.setItem(storageKey(), JSON.stringify(anno.getAnnotations()));
+}
+
+// ── HTML builders ─────────────────────────────────────────────────────────────
+
+function buildSetupForm() {
+  const imgOptions = project_images.length
+    ? project_images.map(p =>
+        `<option value="${p}">${p.split("/").pop()}</option>`
+      ).join("")
+    : '<option value="" disabled>No images found in /objects/</option>';
+
+  const hasAnnotations = project_annotations.length > 0;
+  const annoOptions = hasAnnotations
+    ? '<option value="">— None —</option>' +
+      project_annotations.map(p =>
+        `<option value="${p}">${p.split("/").pop()}</option>`
+      ).join("")
+    : "";
+
+  annotator_div.innerHTML = `
+<div class="row justify-content-center">
+  <div class="col-sm-10 col-md-8 col-lg-6">
+    <div class="card shadow-sm">
+      <div class="card-header bg-primary text-white">
+        <h5 class="mb-0">Image Annotator</h5>
+      </div>
+      <div class="card-body">
+        <div class="mb-3">
+          <label for="ia-image-select" class="form-label fw-semibold">Select an image to annotate</label>
+          <select id="ia-image-select" class="form-select">${imgOptions}</select>
+        </div>
+        ${hasAnnotations ? `
+        <div class="mb-3">
+          <label for="ia-anno-select" class="form-label fw-semibold">
+            Load existing annotations
+            <span class="text-muted fw-normal">(optional)</span>
+          </label>
+          <select id="ia-anno-select" class="form-select">${annoOptions}</select>
+        </div>` : ""}
+        <button id="ia-start-btn" class="btn btn-primary w-100"
+          ${project_images.length === 0 ? "disabled" : ""}>
+          Start Annotating
+        </button>
+      </div>
+    </div>
+  </div>
+</div>`;
+
+  document.getElementById("ia-start-btn")
+    .addEventListener("click", startAnnotating);
+}
+
+function buildAnnotatorLayout() {
+  // Build color swatch buttons
+  const noneBtn = `<button type="button" class="ia-color-swatch btn btn-sm btn-outline-secondary" data-color="" title="None" style="font-size:.7rem;padding:.15rem .45rem;">None</button>`;
+  const colorBtns = Object.entries(colors).map(([name, hex]) =>
+    `<button type="button" class="ia-color-swatch" data-color="${name}"
+     title="${name}" style="width:1.75rem;height:1.75rem;background:${hex};
+     border:none;border-radius:.25rem;cursor:pointer;"></button>`
+  ).join("");
+  const colorSwatchHTML = noneBtn + colorBtns;
+
+  annotator_div.innerHTML = `
+<div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+  <div class="d-flex align-items-center gap-2">
+    <button id="ia-back-btn" class="btn btn-sm btn-outline-secondary">&#8592; Back</button>
+    <span id="ia-image-label" class="text-muted small"></span>
+  </div>
+  <div class="d-flex align-items-center gap-2">
+    <span id="ia-count-badge" class="badge bg-secondary">0 annotations</span>
+    <button id="ia-export-btn" class="btn btn-sm btn-success">&#8595; Export JSON</button>
+  </div>
+</div>
+
+<div class="row g-3">
+  <!-- Image column -->
+  <div class="col-lg-8 col-xl-9">
+    <div id="ia-img-wrap" style="background:#111; border-radius:.375rem; overflow:hidden; line-height:0;">
+      <img id="ia-img" src="" alt="" style="max-width:100%; display:block;">
+    </div>
+    <p class="form-text mt-1 mb-0">
+      Drag on the image to draw a rectangle annotation. Click an existing annotation to edit it.
+    </p>
+  </div>
+
+  <!-- Sidebar column -->
+  <div class="col-lg-4 col-xl-3">
+
+    <!-- Annotation form (hidden until a shape is selected) -->
+    <div id="ia-form-panel" class="card border-primary mb-3 d-none">
+      <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center py-2">
+        <span id="ia-form-title" class="fw-semibold small">New Annotation</span>
+        <button type="button" id="ia-form-cancel" class="btn-close btn-close-white"
+                aria-label="Cancel" style="font-size:.75rem;"></button>
+      </div>
+      <div class="card-body">
+        <form id="ia-form" novalidate>
+          <div class="mb-2">
+            <label for="ia-heading" class="form-label form-label-sm fw-semibold">Heading</label>
+            <input type="text" id="ia-heading" class="form-control form-control-sm"
+                   placeholder="Short label or title" maxlength="120">
+          </div>
+          <div class="mb-3">
+            <label for="ia-desc" class="form-label form-label-sm fw-semibold">Description</label>
+            <textarea id="ia-desc" class="form-control form-control-sm" rows="4"
+                      placeholder="Describe this area…"></textarea>
+          </div>
+          <div class="mb-3">
+            <label class="form-label form-label-sm fw-semibold">Color tag</label>
+            <div id="ia-color-swatches" class="d-flex flex-wrap gap-1 align-items-center">
+              ${colorSwatchHTML}
+            </div>
+          </div>
+          <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-primary btn-sm flex-fill">Save</button>
+            <button type="button" id="ia-delete-btn"
+                    class="btn btn-outline-danger btn-sm d-none">Delete</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Annotation list -->
+    <p class="text-uppercase fw-bold small text-muted mb-2" style="letter-spacing:.05em;">
+      Annotations
+    </p>
+    <div id="ia-list" class="d-flex flex-column gap-2"></div>
+    <p id="ia-list-empty" class="text-muted small fst-italic">
+      No annotations yet. Draw rectangles on the image to get started.
+    </p>
+
+  </div>
+</div>`;
+}
+
+// ── Core logic ────────────────────────────────────────────────────────────────
+
+function startAnnotating() {
+  const imgSelect  = document.getElementById("ia-image-select");
+  const annoSelect = document.getElementById("ia-anno-select");
+
+  currentImagePath = imgSelect ? imgSelect.value : "";
+  if (!currentImagePath) return;
+
+  const loadFrom = annoSelect ? annoSelect.value : "";
+
+  buildAnnotatorLayout();
+
+  document.getElementById("ia-image-label").textContent =
+    currentImagePath.split("/").pop();
+
+  const img = document.getElementById("ia-img");
+  img.src = currentImagePath;
+
+  // Initialise Annotorious once the image dimensions are known
+  function onReady() {
+    img.removeEventListener("load", onReady);
+    initAnnotorious(loadFrom);
+  }
+
+  if (img.complete && img.naturalWidth > 0) {
+    initAnnotorious(loadFrom);
+  } else {
+    img.addEventListener("load", onReady);
+  }
+
+  document.getElementById("ia-back-btn").addEventListener("click", function () {
+    if (anno) { anno.destroy(); anno = null; }
+    // Clear stored annotations so a fresh selection on the form always loads
+    // from the chosen file (or starts empty) rather than the stale session data.
+    sessionStorage.removeItem(storageKey());
+    buildSetupForm();
+  });
+
+  document.getElementById("ia-export-btn")
+    .addEventListener("click", exportAnnotations);
+}
+
+function initAnnotorious(loadFrom) {
+  if (anno) { anno.destroy(); anno = null; }
+
+  anno = Annotorious.createImageAnnotator("ia-img", {
+    drawingEnabled: true
+  });
+
+  anno.setDrawingTool("rectangle");
+
+  // Restore from sessionStorage, or load from a file if provided
+  const stored = sessionStorage.getItem(storageKey());
+  if (stored) {
+    try {
+      anno.setAnnotations(JSON.parse(stored), true);
+    } catch (e) {
+      console.warn("Could not restore annotations from sessionStorage:", e);
+    }
+    refreshList();
+    refreshBadge();
+  } else if (loadFrom) {
+    anno.loadAnnotations(loadFrom).then(() => {
+      saveToStorage();
+      refreshList();
+      refreshBadge();
+    });
+  }
+
+  // ── Annotorious event listeners ───────────────────────────────────────────
+
+  anno.on("createAnnotation", function (annotation) {
+    saveToStorage();
+    refreshList();
+    refreshBadge();
+    showForm(annotation, true);
+  });
+
+  anno.on("updateAnnotation", function (annotation) {
+    // fired when a shape is resized/moved by the user (not by our own updateAnnotation calls)
+    saveToStorage();
+    refreshList();
+  });
+
+  anno.on("deleteAnnotation", function () {
+    saveToStorage();
+    refreshList();
+    refreshBadge();
+    hideForm();
+  });
+
+  anno.on("selectionChanged", function (annotations) {
+    if (annotations.length > 0) {
+      // Only show the form for clicks on existing annotations.
+      // New annotations are handled exclusively via the createAnnotation event.
+      if (!isNewAnnotation) {
+        showForm(annotations[0], false);
+      }
+    } else {
+      // Deselected — hide form unless we just programmatically cancelled
+      if (!isNewAnnotation) {
+        hideForm();
+      }
+    }
+  });
+
+  // ── Form event listeners (wired once after layout is built) ───────────────
+
+  document.getElementById("ia-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    submitForm();
+  });
+
+  document.getElementById("ia-form-cancel").addEventListener("click", cancelForm);
+
+  document.getElementById("ia-delete-btn").addEventListener("click", deleteCurrentAnnotation);
+
+  // Color swatch selection
+  document.querySelectorAll(".ia-color-swatch").forEach(btn => {
+    btn.addEventListener("click", function () {
+      selectColorSwatch(this.dataset.color);
+    });
+  });
+}
+
+// ── Form helpers ──────────────────────────────────────────────────────────────
+
+function showForm(annotation, isNew) {
+  isNewAnnotation   = isNew;
+  currentAnnotationId = annotation.id;
+
+  document.getElementById("ia-form-title").textContent =
+    isNew ? "New Annotation" : "Edit Annotation";
+
+  const deleteBtn = document.getElementById("ia-delete-btn");
+  deleteBtn.classList.toggle("d-none", isNew);
+
+  // Populate fields from existing bodies
+  const bodies    = annotation.bodies || [];
+  const headBody  = bodies.find(b => b.purpose === "heading");
+  const descBody  = bodies.find(b => b.purpose === "describing");
+  const tagBody   = bodies.find(b => b.purpose === "tagging");
+
+  document.getElementById("ia-heading").value = headBody ? headBody.value : "";
+  document.getElementById("ia-desc").value    = descBody ? descBody.value : "";
+  selectColorSwatch(tagBody ? tagBody.value : "");
+
+  document.getElementById("ia-form-panel").classList.remove("d-none");
+  document.getElementById("ia-heading").focus();
+}
+
+function hideForm() {
+  currentAnnotationId = null;
+  document.getElementById("ia-form-panel").classList.add("d-none");
+}
+
+function submitForm() {
+  if (!anno || !currentAnnotationId) return;
+
+  const heading = document.getElementById("ia-heading").value.trim();
+  const desc    = document.getElementById("ia-desc").value.trim();
+
+  const existing = anno.getAnnotationById(currentAnnotationId);
+  if (!existing) return;
+
+  const colorTag = document.querySelector(".ia-color-swatch[data-selected='true']");
+  const tag = colorTag ? colorTag.dataset.color : "";
+
+  // Build updated bodies — preserve any bodies we don't manage
+  const otherBodies = (existing.bodies || []).filter(
+    b => b.purpose !== "heading" && b.purpose !== "describing" && b.purpose !== "tagging"
+  );
+  const newBodies = [...otherBodies];
+  if (heading) newBodies.push({ id: crypto.randomUUID(), purpose: "heading",    value: heading });
+  if (desc)    newBodies.push({ id: crypto.randomUUID(), purpose: "describing", value: desc });
+  if (tag)     newBodies.push({ id: crypto.randomUUID(), purpose: "tagging",    value: tag });
+
+  anno.updateAnnotation({ ...existing, bodies: newBodies });
+  saveToStorage();
+  refreshList();
+  refreshBadge();
+
+  isNewAnnotation = false;
+  hideForm();
+  anno.cancelSelected();
+}
+
+function cancelForm() {
+  if (isNewAnnotation && currentAnnotationId) {
+    anno.removeAnnotation(currentAnnotationId);
+    saveToStorage();
+    refreshList();
+    refreshBadge();
+  } else {
+    anno.cancelSelected();
+  }
+  isNewAnnotation = false;
+  hideForm();
+}
+
+function deleteCurrentAnnotation() {
+  if (!anno || !currentAnnotationId) return;
+  anno.removeAnnotation(currentAnnotationId);
+  saveToStorage();
+  refreshList();
+  refreshBadge();
+  isNewAnnotation = false;
+  hideForm();
+}
+
+// ── Color swatch helper ──────────────────────────────────────────────────────
+
+function selectColorSwatch(colorName) {
+  document.querySelectorAll(".ia-color-swatch").forEach(btn => {
+    const selected = btn.dataset.color === colorName;
+    btn.dataset.selected = selected ? "true" : "false";
+    btn.style.outline       = selected ? "2px solid #000" : "none";
+    btn.style.outlineOffset = selected ? "2px" : "0";
+  });
+}
+
+// ── UI refresh helpers ────────────────────────────────────────────────────────
+
+function refreshBadge() {
+  const badge = document.getElementById("ia-count-badge");
+  if (!badge || !anno) return;
+  const n = anno.getAnnotations().length;
+  badge.textContent = n + (n === 1 ? " annotation" : " annotations");
+}
+
+function refreshList() {
+  const list    = document.getElementById("ia-list");
+  const empty   = document.getElementById("ia-list-empty");
+  if (!list || !anno) return;
+
+  const annotations = anno.getAnnotations();
+
+  if (annotations.length === 0) {
+    list.innerHTML = "";
+    empty.classList.remove("d-none");
+    return;
+  }
+  empty.classList.add("d-none");
+
+  list.innerHTML = annotations.map((a, i) => {
+    const bodies   = a.bodies || [];
+    const headBody = bodies.find(b => b.purpose === "heading");
+    const descBody = bodies.find(b => b.purpose === "describing");
+    const tagBody  = bodies.find(b => b.purpose === "tagging");
+    const label    = headBody ? esc(headBody.value) : `Annotation ${i + 1}`;
+    const snippet  = descBody
+      ? `<span class="text-muted">${esc(descBody.value)}</span>`
+      : `<span class="text-muted fst-italic">No description</span>`;
+    const colorHex  = tagBody && colors[tagBody.value] ? colors[tagBody.value] : null;
+    const colorDot  = colorHex
+      ? `<span title="${esc(tagBody.value)}" style="display:inline-block;width:.65rem;height:.65rem;background:${colorHex};border-radius:50%;border:1px solid rgba(0,0,0,.2);flex-shrink:0;"></span>`
+      : "";
+    return `
+<div class="card ia-list-item" role="button" tabindex="0"
+     data-id="${a.id}" style="cursor:pointer;">
+  <div class="card-body py-2 px-3">
+    <div class="fw-semibold small d-flex align-items-center gap-1">${colorDot}${label}</div>
+    <div class="small text-truncate">${snippet}</div>
+  </div>
+</div>`;
+  }).join("");
+
+  list.querySelectorAll(".ia-list-item").forEach(el => {
+    el.addEventListener("click", function () {
+      const a = anno.getAnnotationById(this.dataset.id);
+      if (a) {
+        anno.setSelected(a.id);
+        showForm(a, false);
+      }
+    });
+    el.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") this.click();
+    });
+  });
+}
+
+// ── Export ────────────────────────────────────────────────────────────────────
+
+function exportAnnotations() {
+  if (!anno) return;
+  const data     = anno.getAnnotations();
+  const json     = JSON.stringify(data, null, 2);
+  const blob     = new Blob([json], { type: "application/json" });
+  const url      = URL.createObjectURL(blob);
+  const a        = document.createElement("a");
+  const basename = currentImagePath
+    ? currentImagePath.split("/").pop().replace(/\.[^.]+$/, "")
+    : "annotations";
+  a.href     = url;
+  a.download = basename + "-annotations.json";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// ── Utility ───────────────────────────────────────────────────────────────────
+
+function esc(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+// ── Initialise ────────────────────────────────────────────────────────────────
+buildSetupForm();
+</script>

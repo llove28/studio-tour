@@ -1,0 +1,140 @@
+[
+  {
+    "id": "9bc8b169-519a-4b78-9e18-cf8607877927",
+    "bodies": [
+      {
+        "id": "817ae501-7645-441b-92b9-3c7990a8a4ce",
+        "purpose": "heading",
+        "value": "Administration Building",
+        "annotation": "9bc8b169-519a-4b78-9e18-cf8607877927"
+      },
+      {
+        "id": "0037a82c-5a00-4c64-97dd-62fb12daa4d7",
+        "purpose": "describing",
+        "value": "Built in 1907 in the Collegiate Gothic style, contains administrative offices, auditorium, and classrooms.",
+        "annotation": "9bc8b169-519a-4b78-9e18-cf8607877927"
+      },
+      {
+        "id": "7f47fdaf-1be2-4171-bd20-c9827467d29f",
+        "purpose": "tagging",
+        "value": "primary",
+        "annotation": "9bc8b169-519a-4b78-9e18-cf8607877927"
+      }
+    ],
+    "target": {
+      "annotation": "9bc8b169-519a-4b78-9e18-cf8607877927",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 622.3993530273438,
+            "minY": 280.47125244140625,
+            "maxX": 789.6699829101562,
+            "maxY": 346.1477355957031
+          },
+          "x": 622.3993530273438,
+          "y": 280.47125244140625,
+          "w": 167.2706298828125,
+          "h": 65.67648315429688
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "JzN0aNx0OYx4OIayQ9WG"
+      },
+      "created": "2026-03-04T01:32:35.245Z"
+    }
+  },
+  {
+    "id": "53ad553f-4bb5-4f65-b3d5-deb0f130b23e",
+    "bodies": [
+      {
+        "id": "90ad84af-6ec5-4fda-84dc-dd6f9313125a",
+        "purpose": "heading",
+        "value": "University Farms",
+        "annotation": "53ad553f-4bb5-4f65-b3d5-deb0f130b23e"
+      },
+      {
+        "id": "17309e4d-16f3-4156-bfea-e1859573554c",
+        "purpose": "describing",
+        "value": "Established with the campus in 1889.",
+        "annotation": "53ad553f-4bb5-4f65-b3d5-deb0f130b23e"
+      },
+      {
+        "id": "e8466023-a81d-48fd-8b15-3b6c9728b9bd",
+        "purpose": "tagging",
+        "value": "success",
+        "annotation": "53ad553f-4bb5-4f65-b3d5-deb0f130b23e"
+      }
+    ],
+    "target": {
+      "annotation": "53ad553f-4bb5-4f65-b3d5-deb0f130b23e",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 1250.171875,
+            "minY": 171.730712890625,
+            "maxX": 1358.118408203125,
+            "maxY": 252.39923095703125
+          },
+          "x": 1250.171875,
+          "y": 171.730712890625,
+          "w": 107.946533203125,
+          "h": 80.66851806640625
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "JzN0aNx0OYx4OIayQ9WG"
+      },
+      "created": "2026-03-04T01:36:02.100Z"
+    }
+  },
+  {
+    "id": "c537048c-f3a3-4949-814a-e8bcd90116a1",
+    "bodies": [
+      {
+        "id": "b7825361-7348-4f79-b4b7-8239f1a730e8",
+        "purpose": "heading",
+        "value": "Hello Walk and Steps",
+        "annotation": "c537048c-f3a3-4949-814a-e8bcd90116a1"
+      },
+      {
+        "id": "a98e83b1-80fd-4e3d-a50b-df3cb25fdf06",
+        "purpose": "describing",
+        "value": "Established in 1910, famous campus walkway.",
+        "annotation": "c537048c-f3a3-4949-814a-e8bcd90116a1"
+      },
+      {
+        "id": "8ada93bc-02d8-4972-9d5c-14179863cb1e",
+        "purpose": "tagging",
+        "value": "info",
+        "annotation": "c537048c-f3a3-4949-814a-e8bcd90116a1"
+      }
+    ],
+    "target": {
+      "annotation": "c537048c-f3a3-4949-814a-e8bcd90116a1",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 782.0179443359375,
+            "minY": 462.5561218261719,
+            "maxX": 849.515625,
+            "maxY": 515.302734375
+          },
+          "x": 782.0179443359375,
+          "y": 462.5561218261719,
+          "w": 67.4976806640625,
+          "h": 52.746612548828125
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "JzN0aNx0OYx4OIayQ9WG"
+      },
+      "created": "2026-03-04T01:37:21.781Z"
+    }
+  }
+]

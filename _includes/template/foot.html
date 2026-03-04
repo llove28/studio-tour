@@ -1,0 +1,7 @@
+<!-- Bootstrap JS bundle -->
+<script src="{{ '/assets/lib/bootstrap.bundle.min.js' | relative_url }}"></script>
+<!-- load other optional js -->
+{% if page.annotation-viewer == true or layout.annotation-viewer == true %}{% include template/annotation-viewer.html %}{% endif %}
+{% if page.foot %}{% include {{ page.foot }} %}{% endif %}
+{% if layout.foot %}{% include {{ layout.foot }} %}{% endif %}
+{% include template/scroll-to-top.html %}

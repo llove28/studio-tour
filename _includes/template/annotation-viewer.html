@@ -1,0 +1,255 @@
+{% comment %}
+
+  This include sets up the Annotorious annotation viewer.
+  It is used in conjunction with the annotated-image.html include. 
+  On the page where annotated images will appear, add "annotation-viewer: true" to the front matter.
+
+  Default annotation style options can be set in "_config.yml".
+  The same options can be added to the page or layout front matter to override the defaults.
+
+{% endcomment %}
+<!-- modal popup for annotations -->
+<div class="modal fade" id="av-modal" tabindex="-1" aria-labelledby="av-modal-label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shadow">
+      <div class="modal-header py-2 bg-dark text-white border-0">
+        <h1 class="modal-title h4 mb-0" id="av-modal-label"></h1>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="av-modal-body"></div>
+    </div>
+  </div>
+</div>
+<!-- popover popup for annotations: virtual anchor element positioned at the annotation box -->
+<!-- Bootstrap Popover (which uses bundled Popper.js) is created on this anchor via JS -->
+<span id="av-popover-anchor"
+      style="position:absolute; display:block; width:1px; height:1px; opacity:0; pointer-events:none;"
+      aria-hidden="true"></span>
+<link rel="stylesheet" href="{{ '/assets/lib' | relative_url }}/annotorious.css">
+<script src="{{ '/assets/lib' | relative_url }}/annotorious.js"></script>
+<script>
+/*
+  Image annotation viewer using Annotorious vanilla javascript approach.
+  https://annotorious.dev/guides/annotating-images/
+
+  Finds all <img class="annotated-image"> elements on the page, initialises
+  Annotorious on each in read-only mode, and shows a Bootstrap modal popup
+  with the annotation heading and description when the user clicks a box.
+*/
+// set default style values 
+const default_fill = "{{ page.annotation-fill | default: site.annotation-fill | default: '#cdcdcd' }}";
+const default_fillOpacity = {{ page.annotation-fillOpacity | default: site.annotation-fillOpacity | default: 0.1 }};
+const default_stroke = "{{ page.annotation-stroke | default: site.annotation-stroke | default: '#f1b300' }}";
+const default_strokeOpacity = {{ page.annotation-strokeOpacity | default: site.annotation-strokeOpacity | default: 1 }};
+const default_strokeWidth = {{ page.annotation-strokeWidth | default: site.annotation-strokeWidth | default: 3 }};
+// set default color options
+const color_primary = "#0d6efd";
+const color_secondary = "#6c757d";
+const color_success = "#198754";
+const color_danger = "#dc3545";
+const color_warning = "#ffc107";
+const color_info = "#0dcaf0";
+const color_dark = "#212529";
+
+// ── Annotation content helpers ────────────────────────────────────────────────
+
+// Parse the annotation's bounding box in display pixels relative to the image element.
+// Handles the Annotorious native RECTANGLE geometry format as well as the W3C
+// FragmentSelector (xywh=pixel:) format used by some exporters.
+function av_get_bounds(annotation, imgEl) {
+  const sel = annotation.target?.selector;
+  if (!sel) return null;
+  const selectors = Array.isArray(sel) ? sel : [sel];
+
+  const sx = imgEl.clientWidth  / imgEl.naturalWidth;
+  const sy = imgEl.clientHeight / imgEl.naturalHeight;
+
+  // Annotorious native format: { type: "RECTANGLE", geometry: { x, y, w, h, bounds } }
+  const rectSel = selectors.find(s => s.type === "RECTANGLE" && s.geometry);
+  if (rectSel) {
+    const { x, y, w, h } = rectSel.geometry;
+    return { x: x * sx, y: y * sy, w: w * sx, h: h * sy };
+  }
+
+  // W3C FragmentSelector fallback: xywh=pixel:x,y,w,h
+  const frag = selectors.find(s => s.type === "FragmentSelector" && s.value);
+  if (!frag) return null;
+  const m = frag.value.match(/xywh=pixel:([0-9.]+),([0-9.]+),([0-9.]+),([0-9.]+)/);
+  if (!m) return null;
+  const [, x, y, w, h] = m.map(Number);
+  return { x: x * sx, y: y * sy, w: w * sx, h: h * sy };
+}
+
+// Build title + body content for any popup style
+function av_content(annotation) {
+  const bodies   = annotation.bodies || [];
+  const headBody = bodies.find(b => b.purpose === "heading");
+  const descBody = bodies.find(b => b.purpose === "describing");
+  return {
+    title: headBody ? headBody.value : "Annotation",
+    desc:  descBody && descBody.value ? descBody.value : null
+  };
+}
+
+// ── Modal popup ───────────────────────────────────────────────────────────────
+
+function av_show_modal(annotation) {
+  const { title, desc } = av_content(annotation);
+  document.getElementById("av-modal-label").textContent = title;
+  const bodyEl = document.getElementById("av-modal-body");
+  bodyEl.innerHTML = desc
+    ? `<p class="mb-0">${desc.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}</p>`
+    : '<p class="text-muted fst-italic mb-0">No description.</p>';
+  bootstrap.Modal.getOrCreateInstance(document.getElementById("av-modal")).show();
+}
+
+// ── Popover popup (Bootstrap Popover on a virtual anchor element) ────────────
+
+const av_popover_anchor = document.getElementById("av-popover-anchor");
+let av_popover_instance = null;
+
+function av_show_popover(annotation, imgEl) {
+  const { title, desc } = av_content(annotation);
+  const rect     = av_get_bounds(annotation, imgEl);
+  const imgRect  = imgEl.getBoundingClientRect();
+
+  // Position the anchor at the bottom-center of the annotation box.
+  // Use document-absolute coordinates (getBoundingClientRect + scroll offset) so
+  // the anchor tracks the annotation when the page is scrolled.
+  // Popper will flip to "top" automatically if there is no room below.
+  const anchorLeft = (rect
+    ? imgRect.left + rect.x + rect.w / 2
+    : imgRect.left + imgRect.width  / 2) + window.scrollX;
+  const anchorTop  = (rect
+    ? imgRect.top  + rect.y + rect.h
+    : imgRect.bottom) + window.scrollY;
+
+  av_popover_anchor.style.left = anchorLeft + "px";
+  av_popover_anchor.style.top  = anchorTop  + "px";
+
+  const safeDesc = desc
+    ? desc.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    : '<span class="text-muted fst-italic">No description.</span>';
+
+  // Dispose previous instance before creating a new one
+  if (av_popover_instance) {
+    av_popover_instance.dispose();
+    av_popover_instance = null;
+  }
+
+  av_popover_instance = new bootstrap.Popover(av_popover_anchor, {
+    title:              title,
+    content:            safeDesc,
+    html:               true,
+    placement:          "bottom",
+    fallbackPlacements: ["top", "left", "right"],
+    trigger:            "manual",
+    container:          "body"
+  });
+
+  av_popover_instance.show();
+}
+
+function av_hide_popover() {
+  if (av_popover_instance) {
+    av_popover_instance.hide();
+  }
+}
+
+// Dismiss the popover when clicking anywhere outside the generated .popover element
+document.addEventListener("click", function (e) {
+  if (!av_popover_instance) return;
+  const popEl = document.querySelector(".popover");
+  if (popEl && !popEl.contains(e.target)) {
+    av_hide_popover();
+  }
+});
+
+// ── Find all annotated images on page ─────────────────────────────────────────
+// Each element is expected to look like:
+// <img id="example-name" class="annotated-image"
+//      src="/objects/example-name.jpg"
+//      data-annotation-file="/objects/example-name-annotations.json"
+//      data-popup-type="modal" />   <!-- 'modal' (default) or 'popover' -->
+const annotated_images = document.querySelectorAll(".annotated-image");
+
+// ── Initialise Annotorious for each annotated image ───────────────────────────
+annotated_images.forEach(function (img) {
+  const annotationFile = img.dataset.annotationFile;
+  if (!annotationFile) return;
+
+  // 'modal' is the default; set data-popup-type="popover" on the <img> for inline popover
+  const popupType = (img.dataset.popupType || "modal").toLowerCase();
+
+  // Read-only: drawing disabled, clicks only select (not edit)
+  const anno = Annotorious.createImageAnnotator(img, {
+    drawingEnabled: false,
+    userSelectAction: "SELECT"
+  });
+
+  // set style options based on tagging value
+  anno.setStyle((annotation, state) => {
+    const label = annotation.bodies?.find(b => b.purpose === 'tagging')?.value;
+    const key = label ? String(label).trim().toLowerCase() : null;
+
+    let strokeColor = default_stroke;
+
+    switch (key) {
+      case 'primary':
+        strokeColor = color_primary;
+        break;
+      case 'secondary':
+        strokeColor = color_secondary;
+        break;
+      case 'success':
+        strokeColor = color_success;
+        break;
+      case 'danger':
+        strokeColor = color_danger;
+        break;
+      case 'warning':
+        strokeColor = color_warning;
+        break;
+      case 'info':
+        strokeColor = color_info;
+        break;
+      case 'dark':
+        strokeColor = color_dark;
+        break;
+      default:
+        // allow direct hex color values like "#ff0000"
+        if (key && /^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(key)) {
+          strokeColor = key;
+        }
+    }
+
+    return {
+      fill: default_fill,
+      fillOpacity: default_fillOpacity,
+      stroke: strokeColor,
+      strokeOpacity: default_strokeOpacity,
+      strokeWidth: default_strokeWidth
+    };
+  });
+  // Load the annotation JSON file linked via the data attribute
+  anno.loadAnnotations(annotationFile).catch(function (err) {
+    console.warn("annotation-viewer: could not load", annotationFile, err);
+  });
+
+  // Show popup when user selects an annotation (selectionChanged is more
+  // reliable than clickAnnotation in read-only / SELECT mode)
+  anno.on("selectionChanged", function (annotations) {
+    if (annotations && annotations.length > 0) {
+      if (popupType === "popover") {
+        av_show_popover(annotations[0], img);
+      } else {
+        av_show_modal(annotations[0]);
+      }
+    } else {
+      if (popupType === "popover") {
+        av_hide_popover();
+      }
+    }
+  });
+});
+</script>

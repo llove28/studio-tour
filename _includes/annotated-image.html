@@ -1,0 +1,14 @@
+{% comment %}
+
+    Annotated Image include.
+    Given an image and annotation JSON file, it will load the image with annotations using Annotorious. This allows visitors to view the interactive annotated image on the webpage.
+
+    The page or layout must have "annotation-viewer: true" in the front matter.
+
+    Options: 
+    - image = the filename of an image contained in the "objects" directory of this project. E.g. "campus02023.jpg" (required)
+    - annotation = the filename of a JSON annotation file contained in the "objects" directory of this project. E.g. "campus-places.json" (required)
+    - popup = the type of popup choosing either 'modal' or 'popover'
+
+{% endcomment %}
+<img id="{{ include.image | slugify }}" class="annotated-image rounded img-fluid" src="{{ '/objects' | relative_url }}/{{ include.image }}" data-popup-type="{{ include.popup | default: 'modal' }}" data-annotation-file="{{ '/objects' | relative_url }}/{{ include.annotation }}" >
