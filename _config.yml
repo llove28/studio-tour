@@ -9,10 +9,10 @@
 #######
 # SITE SETTINGS
 #
-title: Image Annotate
-description: "a basic template to present annotated images"
+title: U of I Library Studio Tour
+description: "A point-and-click tour of the University of Idaho Library Studio"
 year: 2026
-author: evan will 
+author: Leesa Love 
 #organization-name: 
 # add search box to navbar, true/false
 search: false
