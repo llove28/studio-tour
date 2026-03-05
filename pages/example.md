@@ -1,17 +1,12 @@
 ---
-title: Example Page
-nav: Example
+title: Podcast Set
+nav: true
 nav_order: 1
 annotation-viewer: true
 ---
 
-Write content in Markdown.
-Add annotated images using the "annotated-image.html" include!
+## Podcast Set
 
-## Annotated Example
+Our podcasting area was designed with aesthetics, comfort, and ease of use in mind. 
 
-This example uses the "modal" popup option (see the home page for "popover" option).
-
-`{% raw %}{% include annotated-image.html image="campus02023.jpg" annotation="campus02023-annotations.json" popup="modal" %}{% endraw %}`
-
-{% include annotated-image.html image="campus02023.jpg" annotation="campus02023-annotations.json" popup="modal" %}
+{% include annotated-image.html image="podcasting-set.jpg" annotation="podcasting-set-annotations.json" popup="modal" %}
