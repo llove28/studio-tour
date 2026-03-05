@@ -1,0 +1,317 @@
+[
+  {
+    "id": "d8ec97de-884b-4f01-9958-908d0252bc70",
+    "bodies": [
+      {
+        "id": "d1a8b2b0-79e1-4aaf-aa34-c29bad4f3ad0",
+        "purpose": "heading",
+        "value": "LED Studio Sign",
+        "annotation": "d8ec97de-884b-4f01-9958-908d0252bc70"
+      },
+      {
+        "id": "097132f2-90a3-4464-8b58-724e4456ffd1",
+        "purpose": "describing",
+        "value": "The centerpiece for our podcasting set is a custom LED sign with an optional dimming switch (removeable for video projects).",
+        "annotation": "d8ec97de-884b-4f01-9958-908d0252bc70"
+      },
+      {
+        "id": "edc61517-9d0a-4cea-9498-08e8b3fc8d9b",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "d8ec97de-884b-4f01-9958-908d0252bc70"
+      }
+    ],
+    "target": {
+      "annotation": "d8ec97de-884b-4f01-9958-908d0252bc70",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 1660.0250244140625,
+            "minY": 522.6637573242188,
+            "maxX": 2105.8818359375,
+            "maxY": 932.06689453125
+          },
+          "x": 1660.0250244140625,
+          "y": 522.6637573242188,
+          "w": 445.8568115234375,
+          "h": 409.40313720703125
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "mNeVo7UrWrkg61v7QgfI"
+      },
+      "created": "2026-03-05T04:48:09.418Z"
+    }
+  },
+  {
+    "id": "06e96d55-d379-41ec-8047-d228c874de47",
+    "bodies": [
+      {
+        "id": "8a296630-29d1-472d-8952-42cbcf85255f",
+        "purpose": "heading",
+        "value": "Hexagon panels",
+        "annotation": "06e96d55-d379-41ec-8047-d228c874de47"
+      },
+      {
+        "id": "ad848a5c-5855-47ce-ac21-c22c38ed0734",
+        "purpose": "describing",
+        "value": "Part aesthetic, part sound-dampening tool!",
+        "annotation": "06e96d55-d379-41ec-8047-d228c874de47"
+      },
+      {
+        "id": "a494dbee-c2ee-4628-80d3-be45381a5200",
+        "purpose": "tagging",
+        "value": "secondary",
+        "annotation": "06e96d55-d379-41ec-8047-d228c874de47"
+      }
+    ],
+    "target": {
+      "annotation": "06e96d55-d379-41ec-8047-d228c874de47",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "x": 1068.3532104492188,
+          "y": 564.7257385253906,
+          "w": 403.79486083984375,
+          "h": 302.8462219238281,
+          "bounds": {
+            "minX": 1068.3532104492188,
+            "minY": 564.7257385253906,
+            "maxX": 1472.1480712890625,
+            "maxY": 867.5719604492188
+          }
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "mNeVo7UrWrkg61v7QgfI"
+      },
+      "created": "2026-03-05T05:05:07.847Z",
+      "updated": "2026-03-05T05:29:48.199Z",
+      "updatedBy": {
+        "isGuest": true,
+        "id": "mNeVo7UrWrkg61v7QgfI"
+      }
+    }
+  },
+  {
+    "id": "fef52656-5044-4445-868f-adb4db19b374",
+    "bodies": [
+      {
+        "id": "614eeee2-b6bc-4e35-b50c-95ee5f41cbf0",
+        "purpose": "heading",
+        "value": "RODECaster Pro II",
+        "annotation": "fef52656-5044-4445-868f-adb4db19b374"
+      },
+      {
+        "id": "b56f235b-7a2a-479b-971a-9e1a0ccc65d5",
+        "purpose": "describing",
+        "value": "https://rode.com/en-us/products/rodecaster-pro-ii",
+        "annotation": "fef52656-5044-4445-868f-adb4db19b374"
+      },
+      {
+        "id": "3c1010c4-3650-4d39-9b1f-386633e370b0",
+        "purpose": "tagging",
+        "value": "secondary",
+        "annotation": "fef52656-5044-4445-868f-adb4db19b374"
+      }
+    ],
+    "target": {
+      "annotation": "fef52656-5044-4445-868f-adb4db19b374",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 1797.4273681640625,
+            "minY": 1456.439453125,
+            "maxX": 2089.05712890625,
+            "maxY": 1585.4295654296875
+          },
+          "x": 1797.4273681640625,
+          "y": 1456.439453125,
+          "w": 291.6297607421875,
+          "h": 128.9901123046875
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "mNeVo7UrWrkg61v7QgfI"
+      },
+      "created": "2026-03-05T05:08:05.172Z"
+    }
+  },
+  {
+    "id": "58c200b7-2815-4547-bf70-a15bfdf5ed81",
+    "bodies": [
+      {
+        "id": "4de1d0e3-4fe6-4b97-bba5-1d5ecb40d80e",
+        "purpose": "heading",
+        "value": "Privacy Screen",
+        "annotation": "58c200b7-2815-4547-bf70-a15bfdf5ed81"
+      },
+      {
+        "id": "ae5bf1e2-5830-4797-be20-e46929fd0e3b",
+        "purpose": "describing",
+        "value": "We added this privacy screen at the request of our users; it blocks off the awkward back corner and door, providing a better background for video projects.",
+        "annotation": "58c200b7-2815-4547-bf70-a15bfdf5ed81"
+      },
+      {
+        "id": "d6f9aec0-5d8c-4def-9584-546e6363b2ae",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "58c200b7-2815-4547-bf70-a15bfdf5ed81"
+      }
+    ],
+    "target": {
+      "annotation": "58c200b7-2815-4547-bf70-a15bfdf5ed81",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 3028.44091796875,
+            "minY": 261.87957763671875,
+            "maxX": 3883.701171875,
+            "maxY": 1100.3148193359375
+          },
+          "x": 3028.44091796875,
+          "y": 261.87957763671875,
+          "w": 855.26025390625,
+          "h": 838.4352416992188
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "mNeVo7UrWrkg61v7QgfI"
+      },
+      "created": "2026-03-05T05:08:31.173Z"
+    }
+  },
+  {
+    "id": "02cbdeb9-475c-4ef5-83d1-e3da2b1dc1f6",
+    "bodies": [
+      {
+        "id": "064c0030-405f-4e84-8342-948d88a27246",
+        "purpose": "heading",
+        "value": "RODECaster PodMics and Headphones",
+        "annotation": "02cbdeb9-475c-4ef5-83d1-e3da2b1dc1f6"
+      },
+      {
+        "id": "aa6a8af6-9f6f-4131-b062-8dc4367cada3",
+        "purpose": "describing",
+        "value": "Dynamic broadcast microphones with internal pop filters\nhttps://rode.com/en-us/products/nth-100\nhttps://rode.com/en-us/products/podmic",
+        "annotation": "02cbdeb9-475c-4ef5-83d1-e3da2b1dc1f6"
+      },
+      {
+        "id": "7798e1b7-5ecf-43e9-a90c-77cc833190f9",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "02cbdeb9-475c-4ef5-83d1-e3da2b1dc1f6"
+      }
+    ],
+    "target": {
+      "annotation": "02cbdeb9-475c-4ef5-83d1-e3da2b1dc1f6",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 583.2386474609375,
+            "minY": 1086.294189453125,
+            "maxX": 919.734375,
+            "maxY": 1352.6865234375
+          },
+          "x": 583.2386474609375,
+          "y": 1086.294189453125,
+          "w": 336.4957275390625,
+          "h": 266.392333984375
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "mNeVo7UrWrkg61v7QgfI"
+      },
+      "created": "2026-03-05T05:26:02.346Z"
+    }
+  },
+  {
+    "id": "a87ad648-26a1-4cfb-aa11-25f053198b91",
+    "bodies": [
+      {
+        "id": "35138915-0bdd-4fc9-9ee7-8ba1b90e05ae",
+        "purpose": "heading",
+        "value": "Foliage",
+        "annotation": "a87ad648-26a1-4cfb-aa11-25f053198b91"
+      },
+      {
+        "id": "3259fd43-314c-4484-ab33-d2a476fae636",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "a87ad648-26a1-4cfb-aa11-25f053198b91"
+      }
+    ],
+    "target": {
+      "annotation": "a87ad648-26a1-4cfb-aa11-25f053198b91",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 2450.7900390625,
+            "minY": 561.9215698242188,
+            "maxX": 2949.925537109375,
+            "maxY": 1100.3148193359375
+          },
+          "x": 2450.7900390625,
+          "y": 561.9215698242188,
+          "w": 499.135498046875,
+          "h": 538.3932495117188
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "mNeVo7UrWrkg61v7QgfI"
+      },
+      "created": "2026-03-05T05:26:55.209Z"
+    }
+  },
+  {
+    "id": "ec847a7c-9611-401c-aec8-b330234971a0",
+    "bodies": [
+      {
+        "id": "a0f1eb9d-48d1-4360-861d-8ece04255975",
+        "purpose": "heading",
+        "value": "Comfy Chairs",
+        "annotation": "ec847a7c-9611-401c-aec8-b330234971a0"
+      },
+      {
+        "id": "3be06c3d-4c2e-4e19-b1d2-90c87a997668",
+        "purpose": "tagging",
+        "value": "secondary",
+        "annotation": "ec847a7c-9611-401c-aec8-b330234971a0"
+      }
+    ],
+    "target": {
+      "annotation": "ec847a7c-9611-401c-aec8-b330234971a0",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 2882.626220703125,
+            "minY": 1453.63525390625,
+            "maxX": 3878.0927734375,
+            "maxY": 2303.287109375
+          },
+          "x": 2882.626220703125,
+          "y": 1453.63525390625,
+          "w": 995.466552734375,
+          "h": 849.65185546875
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "mNeVo7UrWrkg61v7QgfI"
+      },
+      "created": "2026-03-05T05:27:12.482Z"
+    }
+  }
+]

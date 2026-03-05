@@ -1,0 +1,140 @@
+[
+  {
+    "id": "4b26ede6-0851-4276-a576-a243edd913e4",
+    "bodies": [
+      {
+        "id": "8e7e0f16-235c-4fb4-becc-2325310f3ebf",
+        "purpose": "heading",
+        "value": "Booking the Space",
+        "annotation": "4b26ede6-0851-4276-a576-a243edd913e4"
+      },
+      {
+        "id": "0b13da59-fba8-4323-8eee-ea21c4298eb9",
+        "purpose": "describing",
+        "value": "This QR code posted at the entrance takes you to the Studio's reservation page for easy booking. It's paired with a guide for making the most of your Studio visit, including items to bring and what to prepare beforehand.",
+        "annotation": "4b26ede6-0851-4276-a576-a243edd913e4"
+      },
+      {
+        "id": "469ffc2c-b19b-4594-81cf-2801f81cf707",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "4b26ede6-0851-4276-a576-a243edd913e4"
+      }
+    ],
+    "target": {
+      "annotation": "4b26ede6-0851-4276-a576-a243edd913e4",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "x": 1679.818603515625,
+          "y": 1303.79052734375,
+          "w": 562.841064453125,
+          "h": 452.5936279296875,
+          "bounds": {
+            "minX": 1679.818603515625,
+            "minY": 1303.79052734375,
+            "maxX": 2242.65966796875,
+            "maxY": 1756.3841552734375
+          }
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "yzOAFHHXuDLT6c3O734A"
+      },
+      "created": "2026-03-05T04:29:17.034Z"
+    }
+  },
+  {
+    "id": "ff131477-eb5c-4aa9-aff7-d8700785d251",
+    "bodies": [
+      {
+        "id": "27ba3e06-a315-482c-bccd-d702220a9c2a",
+        "purpose": "heading",
+        "value": "Recording (Not) in Session",
+        "annotation": "ff131477-eb5c-4aa9-aff7-d8700785d251"
+      },
+      {
+        "id": "0baa44d3-2df0-45c7-9954-e23d380e6655",
+        "purpose": "describing",
+        "value": "Reversible sign to indicate when users are actively recording to limit interruptions.",
+        "annotation": "ff131477-eb5c-4aa9-aff7-d8700785d251"
+      },
+      {
+        "id": "f39fd704-500a-4013-8022-9803359268cd",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "ff131477-eb5c-4aa9-aff7-d8700785d251"
+      }
+    ],
+    "target": {
+      "annotation": "ff131477-eb5c-4aa9-aff7-d8700785d251",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 1259.138671875,
+            "minY": 2197.373046875,
+            "maxX": 1621.7939453125,
+            "maxY": 2652.867919921875
+          },
+          "x": 1259.138671875,
+          "y": 2197.373046875,
+          "w": 362.6552734375,
+          "h": 455.494873046875
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "yzOAFHHXuDLT6c3O734A"
+      },
+      "created": "2026-03-05T04:30:16.434Z"
+    }
+  },
+  {
+    "id": "1701acfa-4de2-476d-8162-ab2ef3d89a3e",
+    "bodies": [
+      {
+        "id": "9de7b1e6-e367-4c27-a55a-e61c3af7f2ac",
+        "purpose": "heading",
+        "value": "Coming Soon: Adjustable Blinds",
+        "annotation": "1701acfa-4de2-476d-8162-ab2ef3d89a3e"
+      },
+      {
+        "id": "53ca42b7-4107-4ee0-beef-ab59c5a27a3f",
+        "purpose": "describing",
+        "value": "The Studio sits in a high-traffic area of the U of I Library. Soon to be installed, three sections of semi-opaque blinds will hang inside the windows for users to lower while recording; we aimed to strike a balance between limiting the distraction of people walking by while not completely blocking out the view of the room.",
+        "annotation": "1701acfa-4de2-476d-8162-ab2ef3d89a3e"
+      },
+      {
+        "id": "19e04121-a338-4bcc-960b-a6699f46864d",
+        "purpose": "tagging",
+        "value": "secondary",
+        "annotation": "1701acfa-4de2-476d-8162-ab2ef3d89a3e"
+      }
+    ],
+    "target": {
+      "annotation": "1701acfa-4de2-476d-8162-ab2ef3d89a3e",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 1584.07763671875,
+            "minY": 198.41773986816406,
+            "maxX": 3954.391845703125,
+            "maxY": 1173.2347412109375
+          },
+          "x": 1584.07763671875,
+          "y": 198.41773986816406,
+          "w": 2370.314208984375,
+          "h": 974.8170013427734
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "yzOAFHHXuDLT6c3O734A"
+      },
+      "created": "2026-03-05T04:32:55.043Z"
+    }
+  }
+]
