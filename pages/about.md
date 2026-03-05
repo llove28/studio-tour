@@ -1,34 +1,17 @@
 ---
-title: About This Template
+title: About
 nav: About
 nav_order: 2
 ---
 
-[image-annotate-template](https://github.com/evanwill/image-annotate-template) is a simple website template for creating a presentation with annotated images.
-It uses [Jekyll](https://jekyllrb.com/) static site generation, [Bootstrap 5](https://getbootstrap.com/), and [Annotorious](https://annotorious.dev/).
-This makes it easy to host on GitHub Pages or anywhere else.
+## From Studious to Studio: Supporting Audio Scholarship in the Library
 
-## Get Started
+Academic podcasting is the new kid on the block, offering alternative ways to produce, present, and extend engagement with research. At the University of Idaho Library, we’re hoping to set the stage for this transformation of scholarly communication; in the summer of 2025, our team expanded and redesigned the Library’s studio space with aesthetics, comfort, and ease of use in mind to create the ideal environment for producing audio scholarship. While it’s still a work in progress, we’re already seeing increased use and positive feedback from students and faculty. This Sound Bite session will include a short tour of the studio, insights into the redesign process, and some of the challenges we’ve faced along the way. Through this session, I hope to inspire other librarians who are interested in creating or revamping a podcast space in their library. Takeaways will include considerations for choosing equipment and designing a functional and inviting space.
 
-- Set up your website:
-    - Create a copy of the [template](https://github.com/evanwill/image-annotate-template).
-    - Add your images to the "objects" folder.
-    - Activate GitHub Pages to create your live site.
-    - For more detailed instructions see "docs/create-website.md"
-- Annotate images:
-    - Visit Annotate page.
-    - Select image and use the interface to create/edit annotations.
-    - Download annotation data as JSON.
-    - Add the annotation JSON file to project repository "objects" folder.
-- Publish annotated images:
-    - Create or edit a content page (see "docs/create-website.md" for details).
-    - Add `annotation-viewer: true` to the front matter.
-    - Use the "annotated-image.html" include to add annotated images to the page. Check the comments in the include for all supported options.
+## Presenter
 
-## Guidelines
+Leesa Love is the Open Publishing Librarian at the University of Idaho. When not jamming to her favorite 2000s-era pop punk tunes, she’s probably wrapped up in a podcast. She sees podcasting as an opportunity to both engage students in experiential learning and expand the what it means to publish and engage with scholarship.
 
-- Supported image types include JPG and PNG. Ensure your file extensions are lowercase, `.jpg`, `.jpeg`, or `.png` only.
-- For ease of use, create meaningful filenames without spaces.
-- You can set the default annotation styles (fill, opacity, stroke color, stroke width) in "_config.yml" or as front matter on each page.
-- If you have issues with the "Annotate Image" page caching old versions of your annotations, open the page in a new browser window.
-- Unpublish the "Annotate Image" page when you are done annotating images and don't want it to display publicly by removing the `nav:` option from the front matter (or just deleting "pages/annotate.html").
+## Acknowledgements
+
+This website was built using the [image-annotate-template](https://github.com/evanwill/image-annotate-template), created by [evan will](https://evanwill.github.io/). 
