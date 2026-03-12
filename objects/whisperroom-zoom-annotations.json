@@ -1,0 +1,278 @@
+[
+  {
+    "id": "b66c9a81-40ab-4ae5-a216-78ef030a5c26",
+    "bodies": [
+      {
+        "id": "153c6fdd-851e-4c4f-83bc-9182132b1de3",
+        "purpose": "heading",
+        "value": "Light Switch Signage",
+        "annotation": "b66c9a81-40ab-4ae5-a216-78ef030a5c26"
+      },
+      {
+        "id": "23f75f9f-7556-43c1-a47c-7b8e61004d3a",
+        "purpose": "describing",
+        "value": "We decided against remotes for the WhisperRoom lights, so we wouldn't have to worry about them getting lost. The switch locations are not necessarily intuitive, so we installed signage to help users find them.",
+        "annotation": "b66c9a81-40ab-4ae5-a216-78ef030a5c26"
+      },
+      {
+        "id": "1c453b7d-e756-4db4-8783-8ddc8543b2ba",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "b66c9a81-40ab-4ae5-a216-78ef030a5c26"
+      }
+    ],
+    "target": {
+      "annotation": "b66c9a81-40ab-4ae5-a216-78ef030a5c26",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 3359.63720703125,
+            "minY": 755.4559936523438,
+            "maxX": 3905.07080078125,
+            "maxY": 1538.7911376953125
+          },
+          "x": 3359.63720703125,
+          "y": 755.4559936523438,
+          "w": 545.43359375,
+          "h": 783.3351440429688
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "mgk0vv7bYjxwgGqOFN0_"
+      },
+      "created": "2026-03-12T12:11:58.658Z"
+    }
+  },
+  {
+    "id": "a48059c9-e15a-4794-b268-fe1e16ea64d5",
+    "bodies": [
+      {
+        "id": "f4fdb6ca-e50b-46ed-a8ad-4f08e6eb5f48",
+        "purpose": "heading",
+        "value": "Fire Suppression",
+        "annotation": "a48059c9-e15a-4794-b268-fe1e16ea64d5"
+      },
+      {
+        "id": "3bd3672d-baac-45e4-94ea-fac1c1e22e1e",
+        "purpose": "describing",
+        "value": "One important thing to note if you are considering installing a WhisperRoom: it will require a call to Facilities and the Fire Marshall, who will need to cut holes for fire suppression. Make sure to include this in your budget!",
+        "annotation": "a48059c9-e15a-4794-b268-fe1e16ea64d5"
+      },
+      {
+        "id": "5bef84eb-34f3-4d9d-a7c4-33cd353f8ae9",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "a48059c9-e15a-4794-b268-fe1e16ea64d5"
+      }
+    ],
+    "target": {
+      "annotation": "a48059c9-e15a-4794-b268-fe1e16ea64d5",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 1949.634033203125,
+            "minY": 24.34322738647461,
+            "maxX": 2175.930908203125,
+            "maxY": 169.40533447265625
+          },
+          "x": 1949.634033203125,
+          "y": 24.34322738647461,
+          "w": 226.296875,
+          "h": 145.06210708618164
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "mgk0vv7bYjxwgGqOFN0_"
+      },
+      "created": "2026-03-12T12:15:47.857Z"
+    }
+  },
+  {
+    "id": "1242a27d-2702-4828-ae53-3223481b0c51",
+    "bodies": [
+      {
+        "id": "135b5732-adbe-4d0d-941a-a2d2cf8bf315",
+        "purpose": "heading",
+        "value": "Rode NT1A Microphone",
+        "annotation": "1242a27d-2702-4828-ae53-3223481b0c51"
+      },
+      {
+        "id": "da1e015a-6893-4d38-8c8a-0d0481fab933",
+        "purpose": "describing",
+        "value": "Our main target users for the soundbooth are musicians, so we decided to include a standing microphone. A studio grade pop shield, shock mount, and dust cover are included.",
+        "annotation": "1242a27d-2702-4828-ae53-3223481b0c51"
+      },
+      {
+        "id": "cffe4192-e3e0-4338-83c1-972098b6d1f5",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "1242a27d-2702-4828-ae53-3223481b0c51"
+      }
+    ],
+    "target": {
+      "annotation": "1242a27d-2702-4828-ae53-3223481b0c51",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 499.01348876953125,
+            "minY": 1498.173828125,
+            "maxX": 1021.2368774414062,
+            "maxY": 1944.9649658203125
+          },
+          "x": 499.01348876953125,
+          "y": 1498.173828125,
+          "w": 522.223388671875,
+          "h": 446.7911376953125
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "mgk0vv7bYjxwgGqOFN0_"
+      },
+      "created": "2026-03-12T12:17:41.729Z"
+    }
+  },
+  {
+    "id": "11ceaf16-04bd-4ef9-8aa8-3065724643f6",
+    "bodies": [
+      {
+        "id": "e82ae4c9-0a2e-455b-9b0d-fb34d158aa3a",
+        "purpose": "heading",
+        "value": "WhisperRoom light",
+        "annotation": "11ceaf16-04bd-4ef9-8aa8-3065724643f6"
+      },
+      {
+        "id": "d22573f4-1e20-4562-8191-b1a9d1cfe752",
+        "purpose": "describing",
+        "value": "This light was included in our WhisperRoom package and mounted on the wall by Facilities during the building process.",
+        "annotation": "11ceaf16-04bd-4ef9-8aa8-3065724643f6"
+      },
+      {
+        "id": "9dda7fd3-708f-49c7-b8fa-92ad68322e00",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "11ceaf16-04bd-4ef9-8aa8-3065724643f6"
+      }
+    ],
+    "target": {
+      "annotation": "11ceaf16-04bd-4ef9-8aa8-3065724643f6",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 504.8159484863281,
+            "minY": 343.4797668457031,
+            "maxX": 1015.4344482421875,
+            "maxY": 642.3076171875
+          },
+          "x": 504.8159484863281,
+          "y": 343.4797668457031,
+          "w": 510.6184997558594,
+          "h": 298.8278503417969
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "mgk0vv7bYjxwgGqOFN0_"
+      },
+      "created": "2026-03-12T12:19:50.014Z"
+    }
+  },
+  {
+    "id": "b17a7d41-3ac1-476a-b275-5fe2361a7b3e",
+    "bodies": [
+      {
+        "id": "32da86ab-8cdf-4afd-88fc-5501004498e3",
+        "purpose": "heading",
+        "value": "LED Light Strip",
+        "annotation": "b17a7d41-3ac1-476a-b275-5fe2361a7b3e"
+      },
+      {
+        "id": "8829b7ae-62a1-468c-9631-5aa8052a7a9f",
+        "purpose": "describing",
+        "value": "We installed this additional light source to ensure adequate lighting as well as for aesthetic purposes. Sticking these to the material of the soundbooth was surprisingly difficult! But we managed to wrap them around the ceiling and down two sides.",
+        "annotation": "b17a7d41-3ac1-476a-b275-5fe2361a7b3e"
+      },
+      {
+        "id": "1a9a184e-8362-4573-8438-9073b0c894d4",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "b17a7d41-3ac1-476a-b275-5fe2361a7b3e"
+      }
+    ],
+    "target": {
+      "annotation": "b17a7d41-3ac1-476a-b275-5fe2361a7b3e",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 3008.587158203125,
+            "minY": 627.8013916015625,
+            "maxX": 3144.945556640625,
+            "maxY": 1321.197998046875
+          },
+          "x": 3008.587158203125,
+          "y": 627.8013916015625,
+          "w": 136.3583984375,
+          "h": 693.3966064453125
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "mgk0vv7bYjxwgGqOFN0_"
+      },
+      "created": "2026-03-12T12:20:48.022Z"
+    }
+  },
+  {
+    "id": "21ffa786-4217-48ab-bf51-9bfeb81772a3",
+    "bodies": [
+      {
+        "id": "d164c94d-64f9-4bda-b81c-885dbfe3bb10",
+        "purpose": "heading",
+        "value": "S8.4 Powered Studio Subwoofer",
+        "annotation": "21ffa786-4217-48ab-bf51-9bfeb81772a3"
+      },
+      {
+        "id": "15f0b996-82dd-469f-a9d2-29a877387070",
+        "purpose": "describing",
+        "value": "The one thing the WhisperRoom struggles to dampen is this subwoofer when the bass is turned up high. We advise students to keep the volume at a reasonable level even when using the soundbooth to avoid disturbing the circulation desk and reading room.",
+        "annotation": "21ffa786-4217-48ab-bf51-9bfeb81772a3"
+      },
+      {
+        "id": "6a10dcc0-de1f-46ab-aa9f-b4219c4d4fa3",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "21ffa786-4217-48ab-bf51-9bfeb81772a3"
+      }
+    ],
+    "target": {
+      "annotation": "21ffa786-4217-48ab-bf51-9bfeb81772a3",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 2500.869873046875,
+            "minY": 2374.3486328125,
+            "maxX": 3046.30322265625,
+            "maxY": 2853.05322265625
+          },
+          "x": 2500.869873046875,
+          "y": 2374.3486328125,
+          "w": 545.433349609375,
+          "h": 478.70458984375
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "mgk0vv7bYjxwgGqOFN0_"
+      },
+      "created": "2026-03-12T12:27:45.363Z"
+    }
+  }
+]

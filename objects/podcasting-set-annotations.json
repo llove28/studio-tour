@@ -3,19 +3,19 @@
     "id": "d8ec97de-884b-4f01-9958-908d0252bc70",
     "bodies": [
       {
-        "id": "d1a8b2b0-79e1-4aaf-aa34-c29bad4f3ad0",
+        "id": "555b5102-975d-4205-98dc-78155752924a",
         "purpose": "heading",
         "value": "LED Studio Sign",
         "annotation": "d8ec97de-884b-4f01-9958-908d0252bc70"
       },
       {
-        "id": "097132f2-90a3-4464-8b58-724e4456ffd1",
+        "id": "abffb2bc-d965-4caf-810f-42c0b9ace31e",
         "purpose": "describing",
-        "value": "The centerpiece for our podcasting set is a custom LED sign with an optional dimming switch (removeable for video projects).",
+        "value": "The centerpiece for our podcasting set is a custom LED sign with an optional dimming switch and remote (removeable for video projects).",
         "annotation": "d8ec97de-884b-4f01-9958-908d0252bc70"
       },
       {
-        "id": "edc61517-9d0a-4cea-9498-08e8b3fc8d9b",
+        "id": "77f8e40f-d180-4848-aca5-7340c3f732ff",
         "purpose": "tagging",
         "value": "warning",
         "annotation": "d8ec97de-884b-4f01-9958-908d0252bc70"
@@ -49,21 +49,21 @@
     "id": "06e96d55-d379-41ec-8047-d228c874de47",
     "bodies": [
       {
-        "id": "8a296630-29d1-472d-8952-42cbcf85255f",
+        "id": "cfc5914c-f613-4fb4-bfe9-393ff9a43781",
         "purpose": "heading",
         "value": "Hexagon panels",
         "annotation": "06e96d55-d379-41ec-8047-d228c874de47"
       },
       {
-        "id": "ad848a5c-5855-47ce-ac21-c22c38ed0734",
+        "id": "590ab083-8267-4f06-a938-1c525d3a67c7",
         "purpose": "describing",
         "value": "Part aesthetic, part sound-dampening tool!",
         "annotation": "06e96d55-d379-41ec-8047-d228c874de47"
       },
       {
-        "id": "a494dbee-c2ee-4628-80d3-be45381a5200",
+        "id": "b7d6eaa6-f3ba-4b1c-9ad5-e3691ed020bd",
         "purpose": "tagging",
-        "value": "secondary",
+        "value": "warning",
         "annotation": "06e96d55-d379-41ec-8047-d228c874de47"
       }
     ],
@@ -100,21 +100,21 @@
     "id": "fef52656-5044-4445-868f-adb4db19b374",
     "bodies": [
       {
-        "id": "614eeee2-b6bc-4e35-b50c-95ee5f41cbf0",
+        "id": "9f67b2ac-cdb3-4842-b67a-a6e59c03ed9b",
         "purpose": "heading",
         "value": "RODECaster Pro II",
         "annotation": "fef52656-5044-4445-868f-adb4db19b374"
       },
       {
-        "id": "b56f235b-7a2a-479b-971a-9e1a0ccc65d5",
+        "id": "fb9cface-b860-4f05-b3d3-8446f4b69bc8",
         "purpose": "describing",
-        "value": "https://rode.com/en-us/products/rodecaster-pro-ii",
+        "value": "This audio interface is state-of-the art, offering a ton of features and customizations, including sound effects and the ability to record via Zoom or Bluetooth. However, it still fits our \"one-button start\" goal, as you really can turn it on, press record, and get started. The machine can record to a USB drive or a straight into an audio editor on a laptop.",
         "annotation": "fef52656-5044-4445-868f-adb4db19b374"
       },
       {
-        "id": "3c1010c4-3650-4d39-9b1f-386633e370b0",
+        "id": "ed228747-b68c-4e02-9d87-5496c27571a2",
         "purpose": "tagging",
-        "value": "secondary",
+        "value": "warning",
         "annotation": "fef52656-5044-4445-868f-adb4db19b374"
       }
     ],
@@ -238,13 +238,19 @@
     "id": "a87ad648-26a1-4cfb-aa11-25f053198b91",
     "bodies": [
       {
-        "id": "35138915-0bdd-4fc9-9ee7-8ba1b90e05ae",
+        "id": "141a0b42-b66b-4dc4-8117-b4b0c3384379",
         "purpose": "heading",
-        "value": "Foliage",
+        "value": "Faux Foliage",
         "annotation": "a87ad648-26a1-4cfb-aa11-25f053198b91"
       },
       {
-        "id": "3259fd43-314c-4484-ab33-d2a476fae636",
+        "id": "3d390e3e-bd2d-49b1-adf4-3feca0604ac2",
+        "purpose": "describing",
+        "value": "Partially to block the light switch next to the WhisperRoom, but mostly to add some visual freshness to the space.",
+        "annotation": "a87ad648-26a1-4cfb-aa11-25f053198b91"
+      },
+      {
+        "id": "2fb450c8-caef-4e7e-9afe-602c84fe9efa",
         "purpose": "tagging",
         "value": "warning",
         "annotation": "a87ad648-26a1-4cfb-aa11-25f053198b91"
@@ -278,15 +284,21 @@
     "id": "ec847a7c-9611-401c-aec8-b330234971a0",
     "bodies": [
       {
-        "id": "a0f1eb9d-48d1-4360-861d-8ece04255975",
+        "id": "f309065e-9ad4-4439-98f4-35524a6ea6e0",
         "purpose": "heading",
         "value": "Comfy Chairs",
         "annotation": "ec847a7c-9611-401c-aec8-b330234971a0"
       },
       {
-        "id": "3be06c3d-4c2e-4e19-b1d2-90c87a997668",
+        "id": "284ba049-9e37-471c-97bc-a0a1a810ee20",
+        "purpose": "describing",
+        "value": "It was important to me that we chose chairs that would be comfortable for users of all sizes while still offering enough support for mic etiquette. The velvet fabric and decorative pillows add to the \"living room\" feel we were going for.",
+        "annotation": "ec847a7c-9611-401c-aec8-b330234971a0"
+      },
+      {
+        "id": "d6ac0a77-b7f0-4f33-a9c5-0194c2895b8c",
         "purpose": "tagging",
-        "value": "secondary",
+        "value": "warning",
         "annotation": "ec847a7c-9611-401c-aec8-b330234971a0"
       }
     ],
@@ -312,6 +324,52 @@
         "id": "mNeVo7UrWrkg61v7QgfI"
       },
       "created": "2026-03-05T05:27:12.482Z"
+    }
+  },
+  {
+    "id": "7d6189ad-53c5-4a3b-9433-75228eaeeb67",
+    "bodies": [
+      {
+        "id": "a5caccf5-73ce-4a9e-8b23-258fd18d7709",
+        "purpose": "heading",
+        "value": "WhisperRoom",
+        "annotation": "7d6189ad-53c5-4a3b-9433-75228eaeeb67"
+      },
+      {
+        "id": "361e04fc-083d-4f02-94a2-82208bce7a1c",
+        "purpose": "describing",
+        "value": "It offers a decent background for the other side of the podcast set, for those who wish to record video.",
+        "annotation": "7d6189ad-53c5-4a3b-9433-75228eaeeb67"
+      },
+      {
+        "id": "411e7c4f-e7d0-4f46-afdb-06ef3316db41",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "7d6189ad-53c5-4a3b-9433-75228eaeeb67"
+      }
+    ],
+    "target": {
+      "annotation": "7d6189ad-53c5-4a3b-9433-75228eaeeb67",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 39.23716354370117,
+            "minY": 449.7563781738281,
+            "maxX": 218.70155334472656,
+            "maxY": 1380.7279052734375
+          },
+          "x": 39.23716354370117,
+          "y": 449.7563781738281,
+          "w": 179.4643898010254,
+          "h": 930.9715270996094
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "8MMBA8Rhs0sqKer8nVBH"
+      },
+      "created": "2026-03-12T13:04:01.399Z"
     }
   }
 ]

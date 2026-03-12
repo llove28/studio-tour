@@ -1,0 +1,318 @@
+[
+  {
+    "id": "8c696d16-34ff-483b-9f31-ec77def04d0f",
+    "bodies": [
+      {
+        "id": "8cef612f-bc13-4cae-87ee-09d7c063a44a",
+        "purpose": "heading",
+        "value": "Light Switch",
+        "annotation": "8c696d16-34ff-483b-9f31-ec77def04d0f"
+      },
+      {
+        "id": "520373fc-a119-421b-8711-5da68b4f6214",
+        "purpose": "describing",
+        "value": "An awkward spot, but we were able to secure the switch to the table leg so it is easier to find and reach.",
+        "annotation": "8c696d16-34ff-483b-9f31-ec77def04d0f"
+      },
+      {
+        "id": "e6b4934d-76ce-4840-a711-a4c2be349d27",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "8c696d16-34ff-483b-9f31-ec77def04d0f"
+      }
+    ],
+    "target": {
+      "annotation": "8c696d16-34ff-483b-9f31-ec77def04d0f",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 2680.746826171875,
+            "minY": 1866.6314697265625,
+            "maxX": 2788.0927734375,
+            "maxY": 2046.5084228515625
+          },
+          "x": 2680.746826171875,
+          "y": 1866.6314697265625,
+          "w": 107.345947265625,
+          "h": 179.876953125
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "TH1msJulCvyJHDO8PZh8"
+      },
+      "created": "2026-03-12T12:30:12.347Z"
+    }
+  },
+  {
+    "id": "e4dccabd-b02b-4da2-8b59-fec322513e14",
+    "bodies": [
+      {
+        "id": "a11bbea4-26a8-4b03-99a4-cfa6478552de",
+        "purpose": "heading",
+        "value": "Rokit® 5 Generation Five Powered Studio Monitor",
+        "annotation": "e4dccabd-b02b-4da2-8b59-fec322513e14"
+      },
+      {
+        "id": "317a75d3-e753-4267-8886-f452da2fd7f3",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "e4dccabd-b02b-4da2-8b59-fec322513e14"
+      }
+    ],
+    "target": {
+      "annotation": "e4dccabd-b02b-4da2-8b59-fec322513e14",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 879.0760498046875,
+            "minY": 717.7399291992188,
+            "maxX": 1407.10205078125,
+            "maxY": 1289.284423828125
+          },
+          "x": 879.0760498046875,
+          "y": 717.7399291992188,
+          "w": 528.0260009765625,
+          "h": 571.5444946289062
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "TH1msJulCvyJHDO8PZh8"
+      },
+      "created": "2026-03-12T12:30:48.442Z"
+    }
+  },
+  {
+    "id": "6e9c3fe2-689e-407c-91e8-77cdbc1b9ebb",
+    "bodies": [
+      {
+        "id": "7c3be498-7d0b-41c2-9627-b652bd3c519a",
+        "purpose": "heading",
+        "value": "Cable Mess",
+        "annotation": "6e9c3fe2-689e-407c-91e8-77cdbc1b9ebb"
+      },
+      {
+        "id": "c1f779e7-5907-46c5-8b02-56c14a0a3ff1",
+        "purpose": "describing",
+        "value": "As you can see, cable management is still a challenge in here!",
+        "annotation": "6e9c3fe2-689e-407c-91e8-77cdbc1b9ebb"
+      },
+      {
+        "id": "7e54407b-40c4-43b4-a85c-47ab39612c9e",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "6e9c3fe2-689e-407c-91e8-77cdbc1b9ebb"
+      }
+    ],
+    "target": {
+      "annotation": "6e9c3fe2-689e-407c-91e8-77cdbc1b9ebb",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 1192.41015625,
+            "minY": 2104.533203125,
+            "maxX": 2703.95703125,
+            "maxY": 2922.68310546875
+          },
+          "x": 1192.41015625,
+          "y": 2104.533203125,
+          "w": 1511.546875,
+          "h": 818.14990234375
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "TH1msJulCvyJHDO8PZh8"
+      },
+      "created": "2026-03-12T12:31:32.185Z"
+    }
+  },
+  {
+    "id": "e4e069cb-22ce-4164-aa7e-fb6f6e951117",
+    "bodies": [
+      {
+        "id": "0dc58c67-9926-445e-bbf9-e4165399d741",
+        "purpose": "heading",
+        "value": "Mac Mini",
+        "annotation": "e4e069cb-22ce-4164-aa7e-fb6f6e951117"
+      },
+      {
+        "id": "b0bcf566-513c-48cc-b84b-760193ecd241",
+        "purpose": "describing",
+        "value": "We opted for a Mac mini to save as much desk space as possible. It includes the same software options as the editing bay.",
+        "annotation": "e4e069cb-22ce-4164-aa7e-fb6f6e951117"
+      },
+      {
+        "id": "6546109e-4042-4139-8c54-e997e0508f8b",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "e4e069cb-22ce-4164-aa7e-fb6f6e951117"
+      }
+    ],
+    "target": {
+      "annotation": "e4e069cb-22ce-4164-aa7e-fb6f6e951117",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "x": 2187.535888671875,
+          "y": 1289.2845458984375,
+          "w": 382.9638671875,
+          "h": 205.988037109375,
+          "bounds": {
+            "minX": 2187.535888671875,
+            "minY": 1289.2845458984375,
+            "maxX": 2570.499755859375,
+            "maxY": 1495.2725830078125
+          }
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "TH1msJulCvyJHDO8PZh8"
+      },
+      "created": "2026-03-12T12:32:16.188Z"
+    }
+  },
+  {
+    "id": "49e3bc1e-c33d-4140-8e2c-0912e1ffcdb7",
+    "bodies": [
+      {
+        "id": "37602652-eaa1-4efb-9979-9c923a106e17",
+        "purpose": "heading",
+        "value": "Shure SM58 Microphone and Pop Filter",
+        "annotation": "49e3bc1e-c33d-4140-8e2c-0912e1ffcdb7"
+      },
+      {
+        "id": "ae893b74-ecb5-4ef3-a9be-a5944811eadf",
+        "purpose": "describing",
+        "value": "Ideal for voiceovers, solo recording, and music production.",
+        "annotation": "49e3bc1e-c33d-4140-8e2c-0912e1ffcdb7"
+      },
+      {
+        "id": "a4982ec2-e2b6-4ddb-a1e7-e832ca2ba116",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "49e3bc1e-c33d-4140-8e2c-0912e1ffcdb7"
+      }
+    ],
+    "target": {
+      "annotation": "49e3bc1e-c33d-4140-8e2c-0912e1ffcdb7",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 2445.746337890625,
+            "minY": 587.18408203125,
+            "maxX": 2883.833740234375,
+            "maxY": 917.9255981445312
+          },
+          "x": 2445.746337890625,
+          "y": 587.18408203125,
+          "w": 438.08740234375,
+          "h": 330.74151611328125
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "TH1msJulCvyJHDO8PZh8"
+      },
+      "created": "2026-03-12T12:34:06.642Z"
+    }
+  },
+  {
+    "id": "3b0b2460-5120-4349-999b-b26c6405c6b1",
+    "bodies": [
+      {
+        "id": "3e874176-9ced-423b-b056-d4ce4fab8f5c",
+        "purpose": "heading",
+        "value": "Focusrite Scarlett 16i16 4th Gen USB Audio Interface",
+        "annotation": "3b0b2460-5120-4349-999b-b26c6405c6b1"
+      },
+      {
+        "id": "3ff0034b-cfc7-4bea-9a10-6f1001750de8",
+        "purpose": "describing",
+        "value": "Laminated quickstart guide and color-coded mic cords makes this powerful machine a bit more user friendly.",
+        "annotation": "3b0b2460-5120-4349-999b-b26c6405c6b1"
+      },
+      {
+        "id": "db0200ed-e9c5-451b-8ff8-b815b2cb82ba",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "3b0b2460-5120-4349-999b-b26c6405c6b1"
+      }
+    ],
+    "target": {
+      "annotation": "3b0b2460-5120-4349-999b-b26c6405c6b1",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "x": 774.6314086914062,
+          "y": 1443.0501708984375,
+          "w": 745.6189575195312,
+          "h": 269.8154296875,
+          "bounds": {
+            "minX": 774.6314086914062,
+            "minY": 1443.0501708984375,
+            "maxX": 1520.2503662109375,
+            "maxY": 1712.8656005859375
+          }
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "TH1msJulCvyJHDO8PZh8"
+      },
+      "created": "2026-03-12T12:56:41.956Z"
+    }
+  },
+  {
+    "id": "4d166c79-f3e5-4e01-a60c-8ed631ec4463",
+    "bodies": [
+      {
+        "id": "af191830-a1e8-466f-aacc-5fd8fbe695b9",
+        "purpose": "heading",
+        "value": "Height-Adjustable Desk",
+        "annotation": "4d166c79-f3e5-4e01-a60c-8ed631ec4463"
+      },
+      {
+        "id": "157e2183-8b7c-49eb-8a80-068f52bd7e72",
+        "purpose": "describing",
+        "value": "Since the space is for musicians, we repurposed this standing desk to accommodate users recording with larger instruments.",
+        "annotation": "4d166c79-f3e5-4e01-a60c-8ed631ec4463"
+      },
+      {
+        "id": "dce1d631-a27a-4107-a047-91964e0cb97f",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "4d166c79-f3e5-4e01-a60c-8ed631ec4463"
+      }
+    ],
+    "target": {
+      "annotation": "4d166c79-f3e5-4e01-a60c-8ed631ec4463",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 626.6680908203125,
+            "minY": 1776.6929931640625,
+            "maxX": 1018.3356323242188,
+            "maxY": 1921.7552490234375
+          },
+          "x": 626.6680908203125,
+          "y": 1776.6929931640625,
+          "w": 391.66754150390625,
+          "h": 145.062255859375
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "TH1msJulCvyJHDO8PZh8"
+      },
+      "created": "2026-03-12T12:58:50.158Z"
+    }
+  }
+]

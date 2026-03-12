@@ -1,0 +1,226 @@
+[
+  {
+    "id": "53cdb004-e176-4a73-acd7-57e7cb3869a2",
+    "bodies": [
+      {
+        "id": "13d8486c-94dc-4e47-967d-6c5b22855898",
+        "purpose": "heading",
+        "value": "ADA Package",
+        "annotation": "53cdb004-e176-4a73-acd7-57e7cb3869a2"
+      },
+      {
+        "id": "4dc93a83-a566-461a-b887-c188d5cd7d53",
+        "purpose": "describing",
+        "value": "WhisperRoom offers a full ADA package, which includes this ramp and a door wide enough to accommodate a wheelchair.",
+        "annotation": "53cdb004-e176-4a73-acd7-57e7cb3869a2"
+      },
+      {
+        "id": "a1f21cf0-5dbb-4ac3-b2fa-38cd32e15d60",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "53cdb004-e176-4a73-acd7-57e7cb3869a2"
+      }
+    ],
+    "target": {
+      "annotation": "53cdb004-e176-4a73-acd7-57e7cb3869a2",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 1282.3486328125,
+            "minY": 2070.054931640625,
+            "maxX": 2163.08251953125,
+            "maxY": 2417.6513671875
+          },
+          "x": 1282.3486328125,
+          "y": 2070.054931640625,
+          "w": 880.73388671875,
+          "h": 347.596435546875
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "A6scRRZYBgH87tNLbpxU"
+      },
+      "created": "2026-03-12T12:02:11.255Z"
+    }
+  },
+  {
+    "id": "1ac084ff-7612-404e-8b32-a3f915845f2d",
+    "bodies": [
+      {
+        "id": "3850a757-9a9c-400a-8ed5-46365376fd31",
+        "purpose": "heading",
+        "value": "Column",
+        "annotation": "1ac084ff-7612-404e-8b32-a3f915845f2d"
+      },
+      {
+        "id": "bf6649de-2f27-4269-b11b-1ca4c359bb1e",
+        "purpose": "describing",
+        "value": "The first big hurtle we faced with the Studio was this column right next to the door. Fortunately, we were able to find a WhisperRoom that fit here while still leaving plenty of room for the ADA ramp.",
+        "annotation": "1ac084ff-7612-404e-8b32-a3f915845f2d"
+      },
+      {
+        "id": "f89a5d18-ee1b-4f79-99a5-f6b076b4ec78",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "1ac084ff-7612-404e-8b32-a3f915845f2d"
+      }
+    ],
+    "target": {
+      "annotation": "1ac084ff-7612-404e-8b32-a3f915845f2d",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 2928.73388671875,
+            "minY": 1581.541259765625,
+            "maxX": 3255.192626953125,
+            "maxY": 2377.724853515625
+          },
+          "x": 2928.73388671875,
+          "y": 1581.541259765625,
+          "w": 326.458740234375,
+          "h": 796.18359375
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "A6scRRZYBgH87tNLbpxU"
+      },
+      "created": "2026-03-12T12:03:22.622Z"
+    }
+  },
+  {
+    "id": "a1f1732e-9b97-4b0b-90cf-f5f2c9834371",
+    "bodies": [
+      {
+        "id": "7575b718-1961-4813-8c61-3f7cba5a34cf",
+        "purpose": "heading",
+        "value": "Podcast Set",
+        "annotation": "a1f1732e-9b97-4b0b-90cf-f5f2c9834371"
+      },
+      {
+        "id": "490fe9ff-b7db-4be1-9ca0-24290615e86e",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "a1f1732e-9b97-4b0b-90cf-f5f2c9834371"
+      }
+    ],
+    "target": {
+      "annotation": "a1f1732e-9b97-4b0b-90cf-f5f2c9834371",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 2313.39453125,
+            "minY": 825.284423828125,
+            "maxX": 3130.715576171875,
+            "maxY": 1534.5687255859375
+          },
+          "x": 2313.39453125,
+          "y": 825.284423828125,
+          "w": 817.321044921875,
+          "h": 709.2843017578125
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "A6scRRZYBgH87tNLbpxU"
+      },
+      "created": "2026-03-12T12:05:32.723Z"
+    }
+  },
+  {
+    "id": "b756bb88-9cce-4e9f-8bb3-dcb64a09f683",
+    "bodies": [
+      {
+        "id": "3f8e9a1e-c00c-4846-bbcb-fabbfb92cd51",
+        "purpose": "heading",
+        "value": "Ventilation Silencer and HEPA Filters",
+        "annotation": "b756bb88-9cce-4e9f-8bb3-dcb64a09f683"
+      },
+      {
+        "id": "40d7d2f2-36fb-4a29-ac3a-1cc8aa10d130",
+        "purpose": "describing",
+        "value": "Not pictured: our WhisperRoom package came with 2 fans to circulate air inside the WhisperRoom. To ensure consistent air quality and reduce the additional noise, we added a ventilation silencer.",
+        "annotation": "b756bb88-9cce-4e9f-8bb3-dcb64a09f683"
+      },
+      {
+        "id": "9c678048-1f7a-42dc-b9f0-0e869255b67e",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "b756bb88-9cce-4e9f-8bb3-dcb64a09f683"
+      }
+    ],
+    "target": {
+      "annotation": "b756bb88-9cce-4e9f-8bb3-dcb64a09f683",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 504.95416259765625,
+            "minY": 1619.1192626953125,
+            "maxX": 873.6880493164062,
+            "maxY": 2189.834716796875
+          },
+          "x": 504.95416259765625,
+          "y": 1619.1192626953125,
+          "w": 368.73388671875,
+          "h": 570.7154541015625
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "A6scRRZYBgH87tNLbpxU"
+      },
+      "created": "2026-03-12T12:05:55.882Z"
+    }
+  },
+  {
+    "id": "244c0974-ebae-4c22-acc9-3254f821053f",
+    "bodies": [
+      {
+        "id": "8bd4bc3c-6b46-4786-bae7-13b88f943519",
+        "purpose": "heading",
+        "value": "FUN FACT",
+        "annotation": "244c0974-ebae-4c22-acc9-3254f821053f"
+      },
+      {
+        "id": "08525dd6-5342-4025-a7ed-b27f30392948",
+        "purpose": "describing",
+        "value": "The first person to test the WhisperRoom was the U of I Library's Dean. Confirmed: with the door closed, you can hardly hear the bagpipes from outside of the Studio!",
+        "annotation": "244c0974-ebae-4c22-acc9-3254f821053f"
+      },
+      {
+        "id": "93059216-19fa-4f5e-9e93-62e5310b40ee",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "244c0974-ebae-4c22-acc9-3254f821053f"
+      }
+    ],
+    "target": {
+      "annotation": "244c0974-ebae-4c22-acc9-3254f821053f",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 1343.412841796875,
+            "minY": 628,
+            "maxX": 2033.9083251953125,
+            "maxY": 1741.247802734375
+          },
+          "x": 1343.412841796875,
+          "y": 628,
+          "w": 690.4954833984375,
+          "h": 1113.247802734375
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "A6scRRZYBgH87tNLbpxU"
+      },
+      "created": "2026-03-12T12:09:26.948Z"
+    }
+  }
+]

@@ -1,0 +1,358 @@
+[
+  {
+    "id": "7259ec84-dee7-4a2d-a841-fd3b19417460",
+    "bodies": [
+      {
+        "id": "74abe1f7-94b5-4506-9d70-3e0ef4c2e299",
+        "purpose": "heading",
+        "value": "Sound Panels",
+        "annotation": "7259ec84-dee7-4a2d-a841-fd3b19417460"
+      },
+      {
+        "id": "2d51d7e4-5b3f-44bf-b804-6899707df4ab",
+        "purpose": "describing",
+        "value": "The Studio is sandwiched between the Library's circulation desk and Special Collections reading room, making additional soundproofing necessary. We added 3 large panels to cover most of the wall on the SPEC side, while the WhisperRoom covers the other side.",
+        "annotation": "7259ec84-dee7-4a2d-a841-fd3b19417460"
+      },
+      {
+        "id": "b5beca2f-d96c-4baf-99a0-081214e999ce",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "7259ec84-dee7-4a2d-a841-fd3b19417460"
+      }
+    ],
+    "target": {
+      "annotation": "7259ec84-dee7-4a2d-a841-fd3b19417460",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 72.53103637695312,
+            "minY": 33.04698181152344,
+            "maxX": 800.7425537109375,
+            "maxY": 1193.5435791015625
+          },
+          "x": 72.53103637695312,
+          "y": 33.04698181152344,
+          "w": 728.2115173339844,
+          "h": 1160.496597290039
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "goyLiiu2SMGAqUzKNYzY"
+      },
+      "created": "2026-03-12T11:37:26.473Z"
+    }
+  },
+  {
+    "id": "70e53368-8b08-4cd6-8a94-1c43320b0373",
+    "bodies": [
+      {
+        "id": "a747e66f-ccef-46c5-8aa1-df146f38217f",
+        "purpose": "heading",
+        "value": "Extra Chairs",
+        "annotation": "70e53368-8b08-4cd6-8a94-1c43320b0373"
+      },
+      {
+        "id": "50dda7c0-1d07-4a1d-b08d-43ae44747d2f",
+        "purpose": "describing",
+        "value": "While the Studio is not meant to accommodate more than a handful of users at a time, we decided to include two additional chairs in case of visitors/observers.",
+        "annotation": "70e53368-8b08-4cd6-8a94-1c43320b0373"
+      },
+      {
+        "id": "9c844f1e-b1d3-426e-9a19-bccd17de3249",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "70e53368-8b08-4cd6-8a94-1c43320b0373"
+      }
+    ],
+    "target": {
+      "annotation": "70e53368-8b08-4cd6-8a94-1c43320b0373",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 3443.7734375,
+            "minY": 1370.5191650390625,
+            "maxX": 4003.712890625,
+            "maxY": 2380.151123046875
+          },
+          "x": 3443.7734375,
+          "y": 1370.5191650390625,
+          "w": 559.939453125,
+          "h": 1009.6319580078125
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "goyLiiu2SMGAqUzKNYzY"
+      },
+      "created": "2026-03-12T11:39:52.319Z"
+    }
+  },
+  {
+    "id": "618bc83d-5022-4122-8783-7a5d3e9e09a9",
+    "bodies": [
+      {
+        "id": "cc36a2f7-cf36-4f00-bb7c-bb2d3f517425",
+        "purpose": "heading",
+        "value": "Club Ad",
+        "annotation": "618bc83d-5022-4122-8783-7a5d3e9e09a9"
+      },
+      {
+        "id": "e6c351f2-68a7-46da-af78-061ccb9503e2",
+        "purpose": "describing",
+        "value": "One of the programs I'm currently building for the space is a podcasting club! This community of practice will help students of all skill levels learn more about audio storytelling and production and encourage the use of podcasting as a form of scholarship.",
+        "annotation": "618bc83d-5022-4122-8783-7a5d3e9e09a9"
+      },
+      {
+        "id": "3adafe01-6ac6-40f9-b31f-667a3e200888",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "618bc83d-5022-4122-8783-7a5d3e9e09a9"
+      }
+    ],
+    "target": {
+      "annotation": "618bc83d-5022-4122-8783-7a5d3e9e09a9",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 2970.87109375,
+            "minY": 1486.56884765625,
+            "maxX": 3342.229736328125,
+            "maxY": 1704.162109375
+          },
+          "x": 2970.87109375,
+          "y": 1486.56884765625,
+          "w": 371.358642578125,
+          "h": 217.59326171875
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "goyLiiu2SMGAqUzKNYzY"
+      },
+      "created": "2026-03-12T11:43:13.712Z"
+    }
+  },
+  {
+    "id": "a66de59f-9a1e-45f1-b3da-b244c0455bfa",
+    "bodies": [
+      {
+        "id": "716fa09c-a4bf-4047-a201-f9678edda9c8",
+        "purpose": "heading",
+        "value": "AKAI MPK Mini",
+        "annotation": "a66de59f-9a1e-45f1-b3da-b244c0455bfa"
+      },
+      {
+        "id": "b2345ff6-6fab-4446-bc2e-d0ab25d44cb7",
+        "purpose": "describing",
+        "value": "An ultra-compact keyboard for singer-songwriters, beat makers, and electronic musicians to create music.",
+        "annotation": "a66de59f-9a1e-45f1-b3da-b244c0455bfa"
+      },
+      {
+        "id": "a2b6e254-dfc1-4c9d-9cac-a3edc8f36be0",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "a66de59f-9a1e-45f1-b3da-b244c0455bfa"
+      }
+    ],
+    "target": {
+      "annotation": "a66de59f-9a1e-45f1-b3da-b244c0455bfa",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 1526.052978515625,
+            "minY": 1370.519287109375,
+            "maxX": 1911.91796875,
+            "maxY": 1541.6925048828125
+          },
+          "x": 1526.052978515625,
+          "y": 1370.519287109375,
+          "w": 385.864990234375,
+          "h": 171.1732177734375
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "goyLiiu2SMGAqUzKNYzY"
+      },
+      "created": "2026-03-12T11:46:13.452Z"
+    }
+  },
+  {
+    "id": "f03c2e07-41a0-4aa5-bf8d-929a9ea47a97",
+    "bodies": [
+      {
+        "id": "99b5fbf9-5d7a-4748-a2e5-04233af87484",
+        "purpose": "heading",
+        "value": "Interface and Compressor",
+        "annotation": "f03c2e07-41a0-4aa5-bf8d-929a9ea47a97"
+      },
+      {
+        "id": "e7f684d8-ebbc-43ac-b024-95ce78492c41",
+        "purpose": "describing",
+        "value": "Focusrite Scarlett 18i20 3rd Generation USB Audio Interface (top)\ndbx 266xs 2-channel Compressor/Gate (bottom)",
+        "annotation": "f03c2e07-41a0-4aa5-bf8d-929a9ea47a97"
+      },
+      {
+        "id": "dce12b45-be07-401b-a2e6-efa574dadda7",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "f03c2e07-41a0-4aa5-bf8d-929a9ea47a97"
+      }
+    ],
+    "target": {
+      "annotation": "f03c2e07-41a0-4aa5-bf8d-929a9ea47a97",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 2320.9931640625,
+            "minY": 1889.8414306640625,
+            "maxX": 3188.464111328125,
+            "maxY": 2310.521240234375
+          },
+          "x": 2320.9931640625,
+          "y": 1889.8414306640625,
+          "w": 867.470947265625,
+          "h": 420.6798095703125
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "goyLiiu2SMGAqUzKNYzY"
+      },
+      "created": "2026-03-12T11:47:21.215Z"
+    }
+  },
+  {
+    "id": "836c217c-8f20-494a-b278-75221b0a6866",
+    "bodies": [
+      {
+        "id": "f2dde788-9f4c-4391-99d7-506491d1f76d",
+        "purpose": "heading",
+        "value": "Rokit® 5 Generation Three Powered Studio Monitor",
+        "annotation": "836c217c-8f20-494a-b278-75221b0a6866"
+      },
+      {
+        "id": "428ec706-6423-43d8-8ae3-707577d6abdc",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "836c217c-8f20-494a-b278-75221b0a6866"
+      }
+    ],
+    "target": {
+      "annotation": "836c217c-8f20-494a-b278-75221b0a6866",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 2878.031494140625,
+            "minY": 775.7646484375,
+            "maxX": 3290.007568359375,
+            "maxY": 1257.3709716796875
+          },
+          "x": 2878.031494140625,
+          "y": 775.7646484375,
+          "w": 411.97607421875,
+          "h": 481.6063232421875
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "goyLiiu2SMGAqUzKNYzY"
+      },
+      "created": "2026-03-12T11:50:23.055Z"
+    }
+  },
+  {
+    "id": "a1cad278-ea59-4335-9321-fe02006ad6f0",
+    "bodies": [
+      {
+        "id": "4804b7d6-c787-43c2-9ae0-63b7db16ef0a",
+        "purpose": "heading",
+        "value": "Mac with Various Editing Software Options",
+        "annotation": "a1cad278-ea59-4335-9321-fe02006ad6f0"
+      },
+      {
+        "id": "a38de3ff-bd50-40a7-98aa-adb844f513ff",
+        "purpose": "describing",
+        "value": "As with the soundbooth, we have several free and paid audio editing software options, including Audition, Adobe Audition, Logic Pro X, Garageband, and REAPER (highly accessible for screen readers). Additional software is available for video editing.",
+        "annotation": "a1cad278-ea59-4335-9321-fe02006ad6f0"
+      },
+      {
+        "id": "8d5a46b7-8525-49b7-91cc-0f9976f13197",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "a1cad278-ea59-4335-9321-fe02006ad6f0"
+      }
+    ],
+    "target": {
+      "annotation": "a1cad278-ea59-4335-9321-fe02006ad6f0",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 1331.669677734375,
+            "minY": 308.6649169921875,
+            "maxX": 2875.130126953125,
+            "maxY": 880.2093505859375
+          },
+          "x": 1331.669677734375,
+          "y": 308.6649169921875,
+          "w": 1543.46044921875,
+          "h": 571.54443359375
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "goyLiiu2SMGAqUzKNYzY"
+      },
+      "created": "2026-03-12T11:51:08.371Z"
+    }
+  },
+  {
+    "id": "3e25b655-6869-4961-9ad3-a87d278e9b49",
+    "bodies": [
+      {
+        "id": "e1c0b9c4-a913-4dcc-ad50-6b031debba68",
+        "purpose": "heading",
+        "value": "Shure SM58 Dynamic Vocal Microphone",
+        "annotation": "3e25b655-6869-4961-9ad3-a87d278e9b49"
+      },
+      {
+        "id": "98177419-f39c-48de-9c3a-b886b8234c48",
+        "purpose": "tagging",
+        "value": "warning",
+        "annotation": "3e25b655-6869-4961-9ad3-a87d278e9b49"
+      }
+    ],
+    "target": {
+      "annotation": "3e25b655-6869-4961-9ad3-a87d278e9b49",
+      "selector": {
+        "type": "RECTANGLE",
+        "geometry": {
+          "bounds": {
+            "minX": 858.7673950195312,
+            "minY": 856.99951171875,
+            "maxX": 1087.9654541015625,
+            "maxY": 1118.111328125
+          },
+          "x": 858.7673950195312,
+          "y": 856.99951171875,
+          "w": 229.19805908203125,
+          "h": 261.11181640625
+        }
+      },
+      "creator": {
+        "isGuest": true,
+        "id": "goyLiiu2SMGAqUzKNYzY"
+      },
+      "created": "2026-03-12T11:59:14.348Z"
+    }
+  }
+]
