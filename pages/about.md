@@ -1,7 +1,7 @@
 ---
 title: About
 nav: About
-nav_order: 2
+nav_order: 4
 ---
 
 This point-and-click tour of the [U of I Library Studio](lib.uidaho.edu/studio) was created for a [Spring Forward 2026 Conference](https://www.forwardlibraries.org/initiatives/conference/2026) sound bite presentation. It was built using the [image-annotate-template](https://github.com/evanwill/image-annotate-template), created by [evan will](https://evanwill.github.io/). 
